@@ -172,10 +172,3 @@ Errors encountered: 0
 - GUI interface for easier operation
 - Scheduling/automation capabilities
 
-## License
-
-This is an educational project created for demonstration purposes.
-
-## Author
-
-Created as part of an internship assignment (January 2026)
