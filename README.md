@@ -26,6 +26,45 @@ File systems become cluttered with mixed file types, making it difficult to find
 
 ---
 
+## 📁 File Categories
+
+Files are organized into these folders:
+
+| Category | File Types |
+|----------|-----------|
+| **Images** | .jpg, .jpeg, .png, .gif, .bmp, .svg, .ico, .webp |
+| **Documents** | .pdf, .docx, .doc, .txt, .xlsx, .xls, .pptx, .ppt, .csv |
+| **Videos** | .mp4, .mkv, .avi, .mov, .flv, .wmv, .webm |
+| **Audio** | .mp3, .wav, .flac, .aac, .wma, .m4a, .ogg |
+| **Archives** | .zip, .rar, .7z, .tar, .gz, .iso |
+| **Code** | .py, .js, .html, .css, .java, .cpp, .c, .json, .xml, .yaml |
+| **Others** | Files with no extension or unknown types |
+
+---
+
+## ✨ Features
+
+✅ **Automatic file categorization** - Organizes by type  
+✅ **Preview mode** - See changes before they happen  
+✅ **Safe operation** - Never deletes or overwrites files  
+✅ **Error handling** - Handles missing paths, permissions, duplicates  
+✅ **Summary statistics** - Shows what was done  
+✅ **No dependencies** - Uses standard library only  
+✅ **Cross-platform** - Works on Windows, Linux, Mac  
+✅ **Idempotent** - Safe to run multiple times  
+
+---
+
+## 🔧 How It Works
+
+1. **Scan** - Reads all files in the target directory
+2. **Categorize** - Maps each file extension to a category
+3. **Create** - Creates category folders if they don't exist
+4. **Move** - Moves files to appropriate folders
+5. **Report** - Shows summary of actions taken
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -62,35 +101,6 @@ python file_organizer.py D:\Documents --preview
 python file_organizer.py ~/Downloads
 python file_organizer.py ./my_folder --preview
 ```
-
----
-
-## 📁 File Categories
-
-Files are organized into these folders:
-
-| Category | File Types |
-|----------|-----------|
-| **Images** | .jpg, .jpeg, .png, .gif, .bmp, .svg, .ico, .webp |
-| **Documents** | .pdf, .docx, .doc, .txt, .xlsx, .xls, .pptx, .ppt, .csv |
-| **Videos** | .mp4, .mkv, .avi, .mov, .flv, .wmv, .webm |
-| **Audio** | .mp3, .wav, .flac, .aac, .wma, .m4a, .ogg |
-| **Archives** | .zip, .rar, .7z, .tar, .gz, .iso |
-| **Code** | .py, .js, .html, .css, .java, .cpp, .c, .json, .xml, .yaml |
-| **Others** | Files with no extension or unknown types |
-
----
-
-## ✨ Features
-
-✅ **Automatic file categorization** - Organizes by type  
-✅ **Preview mode** - See changes before they happen  
-✅ **Safe operation** - Never deletes or overwrites files  
-✅ **Error handling** - Handles missing paths, permissions, duplicates  
-✅ **Summary statistics** - Shows what was done  
-✅ **No dependencies** - Uses standard library only  
-✅ **Cross-platform** - Works on Windows, Linux, Mac  
-✅ **Idempotent** - Safe to run multiple times  
 
 ---
 
@@ -136,41 +146,6 @@ Errors: 0
 
 ---
 
-## 🎨 Design Decisions
-
-### 1. **Modular Functions**
-Each function has a single responsibility for easy maintenance and testing.
-
-### 2. **Preview Mode**
-Users can safely explore changes with `--preview` before organizing.
-
-### 3. **Standard Library Only**
-No external dependencies - works anywhere Python 3.6+ is installed.
-
-### 4. **Safe File Handling**
-- Validates paths exist
-- Handles file name conflicts with auto-rename
-- Skips already-organized files
-- Clear error messages
-
-### 5. **Extensible Categories**
-Easy to customize - edit `FILE_CATEGORIES` dictionary to add/modify categories.
-
-### 6. **User-Friendly Output**
-Clear status messages help users understand what's happening.
-
----
-
-## 🔧 How It Works
-
-1. **Scan** - Reads all files in the target directory
-2. **Categorize** - Maps each file extension to a category
-3. **Create** - Creates category folders if they don't exist
-4. **Move** - Moves files to appropriate folders
-5. **Report** - Shows summary of actions taken
-
----
-
 ## 🧪 Testing Results
 
 ```
@@ -183,5 +158,4 @@ Clear status messages help users understand what's happening.
 
 SUCCESS RATE: 100% (7/7 tests)
 ```
-
 ---
